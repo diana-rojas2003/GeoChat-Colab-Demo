@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and environments
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.tmp
+*.log
+.env
+venv/
+env/
