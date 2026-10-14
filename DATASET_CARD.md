@@ -56,7 +56,7 @@ Esta ficha describe el conjunto de datos **GeoChat_Instruct**, el primer dataset
 - **Paper de referencia:** [GeoChat: Grounded Large Vision-Language Model for Remote Sensing (CVPR 2024)](https://arxiv.org/abs/2311.15826)
 - **Institución creadora:** Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dabi, EAU.
 - **Autores:** Kartik Kuckreja, Muhammad Sohail Danish, Muzammal Naseer, Abhijit Das, Salman Khan, Fahad Shahbaz Khan.
-- **Documentado por:** Diana Katherin Avendaño Rojas (código 20211007063), Universidad Distrital Francisco José de Caldas.
+- **Documentado por:** Diana Katherin Avendaño Rojas (código 20212025089), Universidad Distrital Francisco José de Caldas.
 
 ### Resumen
 **GeoChat_Instruct** contiene aproximadamente **318,000 pares de instrucciones, preguntas y respuestas multimodales** orientadas a tareas analíticas de observación de la Tierra. Fue creado para dotar a los modelos de visión-lenguaje de capacidades que trascienden los modelos generalistas: conversación interactiva sobre imágenes aéreas y satelitales, descripción pormenorizada de coberturas (*captioning*), respuesta a preguntas visuales complejas (VQA) y localización espacial precisa de objetos referenciados (*visual grounding*) mediante coordenadas normalizadas.
@@ -205,7 +205,7 @@ Durante el demo experimental desarrollado en Google Colab por **Diana Katherin A
 
 ### 10.2 Datos de la Autora de la Ficha
 - **Nombre:** Diana Katherin Avendaño Rojas
-- **Código Estudiantil:** 20211007063
+- **Código Estudiantil:** 20212025089
 - **Correo Institucional:** `dkavendanor@udistrital.edu.co`
 - **Usuario de GitHub:** [`diana-rojas2003`](https://github.com/diana-rojas2003)
 - **Curso:** Inteligencia Artificial Aplicada al Territorio

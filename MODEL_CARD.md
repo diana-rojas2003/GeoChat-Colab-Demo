@@ -53,7 +53,7 @@ Más allá de los detalles de arquitectura, el valor primordial de **GeoChat** r
   Kartik Kuckreja, Muhammad Sohail Danish, Muzammal Naseer, Abhijit Das, Salman Khan y Fahad Shahbaz Khan.  
   *Institución:* Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dabi, Emiratos Árabes Unidos.
 - **Adaptado y documentado por:**  
-  **Diana Katherin Avendaño Rojas** (Código estudiantil: 20211007063).  
+  **Diana Katherin Avendaño Rojas** (Código estudiantil: 20212025089).  
   *Institución:* Universidad Distrital Francisco José de Caldas.  
   *Curso:* Inteligencia Artificial Aplicada al Territorio.  
   *Contacto:* `dkavendanor@udistrital.edu.co` | GitHub: [`diana-rojas2003`](https://github.com/diana-rojas2003).
@@ -449,7 +449,7 @@ Para referenciar esta implementación, parches de compatibilidad en Google Colab
 
 ### 14.3 Datos de la Autora de la Ficha
 - **Nombre:** Diana Katherin Avendaño Rojas
-- **Código Estudiantil:** 20211007063
+- **Código Estudiantil:** 20212025089
 - **Correo Electrónico Institucional:** `dkavendanor@udistrital.edu.co`
 - **Usuario de GitHub:** [`diana-rojas2003`](https://github.com/diana-rojas2003)
 - **Asignatura:** Inteligencia Artificial Aplicada al Territorio

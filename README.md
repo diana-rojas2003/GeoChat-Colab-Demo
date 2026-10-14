@@ -20,7 +20,7 @@
 
 ### Datos de la autora de la ficha
 - **Nombre:** Diana Katherin Avendaño Rojas
-- **Código estudiantil:** 20211007063
+- **Código estudiantil:** 20212025089
 - **Correo electrónico:** dkavendanor@udistrital.edu.co
 - **Usuario de GitHub:** [diana-rojas2003](https://github.com/diana-rojas2003)
 - **Curso:** Inteligencia Artificial Aplicada al Territorio
