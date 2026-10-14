@@ -13,10 +13,10 @@ dataset_info:
       dtype: string
   splits:
   - name: train
-    num_bytes: [VERIFICAR]
+    num_bytes: 
     num_examples: 318000
-  download_size: [VERIFICAR]
-  dataset_size: [VERIFICAR]
+  download_size: 
+  dataset_size: 
 configs:
 - config_name: default
   data_files:
@@ -163,10 +163,10 @@ A diferencia de los dominios visuales cotidianos (donde se cuenta con miles de a
 
 ---
 
-## 8. Licencia y Consideraciones Legales `[VERIFICAR]`
+## 8. Licencia y Consideraciones Legales
 
 - **Licencia declarada:** Apache-2.0 en el repositorio de Hugging Face de MBZUAI.
-- **Situación de Licencias Heredadas `[VERIFICAR]`:**  
+- **Situación de Licencias Heredadas :**  
   > [!CAUTION]
   > El usuario debe verificar la legalidad de uso comercial antes de cualquier despliegue operativo:
   > 1. Datasets como **DIOR** y **NWPU-RESISC45** fueron publicados bajo licencias de investigación académica no comercial.
@@ -182,7 +182,7 @@ Durante el demo experimental desarrollado en Google Colab por **Diana Katherin A
 - **Archivo evaluado:** `/content/drive/MyDrive/Geochat/satelite.png`
 - **Resolución nativa:** 852 × 420 píxeles, 3 canales (RGB).
 - **Contenido visual analizado:** Vista cenital de un sector urbano consolidado con múltiples bloques de edificaciones rectangulares y una vía arterial de tránsito.
-- **Ficha de la muestra propia `[COMPLETAR]`:**
+- **Ficha de la muestra propia :**
   - **Fuente del dato:** `[COMPLETAR: e.g., Captura satelital Google Earth / Ortofoto IDECA Bogotá / PlanetScope / Sentinel-2]`
   - **Resolución espacial (GSD):** `[COMPLETAR: e.g., ~0.5 metros por píxel / 1.0 m / 0.3 m]`
   - **Fecha aproximada de captura:** `[COMPLETAR: e.g., 2024 / 2025]`
