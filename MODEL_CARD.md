@@ -70,9 +70,9 @@ GeoChat se basa en la arquitectura de **LLaVA-1.5** adaptada para teledetección
 2. **Proyector Multimodal:** Conector MLP de dos capas con funciones de activación no lineal GELU, encargado de alinear espacial y semánticamente los tokens visuales con el espacio latente del modelo de lenguaje.
 3. **Modelo de Lenguaje Autorregresivo (LLM):** Vicuna-7B (versión v1.5), un modelo ajustado a partir de LLaMA-2 de Meta con 7 mil millones de parámetros.
 
-### 1.6 Licenciamiento y Estado Legal `[VERIFICAR]`
+### 1.6 Licenciamiento y Estado Legal 
 - **Licencia declarada en Hugging Face:** Apache-2.0 por MBZUAI.
-- **Licencias heredadas y restricciones `[VERIFICAR]`:**  
+- **Licencias heredadas y restricciones :**  
   Aunque el repositorio declara Apache-2.0, el modelo hereda componentes que imponen restricciones legales estrictas:
   - **Vicuna-7B v1.5:** Se deriva de los pesos de **LLaMA-2** de Meta, sujeto al *LLaMA 2 Community License Agreement* (que impone políticas de uso aceptable y restricciones si se superan 700 millones de usuarios activos mensuales).
   - **Datos de ShareGPT:** Vicuna fue ajustado con conversaciones extraídas de ShareGPT generadas por modelos de OpenAI, lo que infringe los términos comerciales de OpenAI respecto al entrenamiento de modelos competidores.
