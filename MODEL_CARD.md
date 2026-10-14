@@ -21,16 +21,16 @@ base_model:
 pipeline_tag: image-text-to-text
 ---
 
-# Ficha del Modelo (Model Card): GeoChat-7B (Adaptación en Google Colab)
+# Ficha del Modelo (Model Card): GeoChat (Adaptación en Google Colab)
 
-Esta ficha de modelo documenta **GeoChat-7B**, el primer Modelo de Lenguaje Visual de Gran Escala (LVLM) adaptado y especializado en teledetección (*Remote Sensing*). Sigue la estructura estandarizada propuesta por **Mitchell et al. (2019)** (*Model Cards for Model Reporting*) y las directrices de la plantilla oficial de **Hugging Face Hub**.
+Esta ficha de modelo documenta **GeoChat**, el primer Modelo de Lenguaje Visual de Gran Escala (LVLM) adaptado y especializado en teledetección (*Remote Sensing*). Sigue la estructura estandarizada propuesta por **Mitchell et al. (2019)** (*Model Cards for Model Reporting*) y las directrices de la plantilla oficial de **Hugging Face Hub**.
 
 ---
 
 ## 1. Detalles del Modelo (Model Details)
 
 ### 1.1 Información Básica
-- **Nombre del modelo:** GeoChat-7B (`MBZUAI/geochat-7B`).
+- **Nombre del modelo:** GeoChat (`MBZUAI/geochat`).
 - **Versión:** 1.0 (Publicado formalmente en **CVPR 2024**; pre-print en arXiv en noviembre de 2023).
 - **Tipo de modelo:** Modelo de Lenguaje Visual Multimodal (LVLM / Large Vision-Language Model) ajustado por instrucciones para imágenes satelitales y aéreas.
 - **Fecha de publicación original:** Noviembre de 2023 (arXiv:2311.15826) / Junio de 2024 (CVPR 2024).
@@ -53,7 +53,7 @@ Esta ficha de modelo documenta **GeoChat-7B**, el primer Modelo de Lenguaje Visu
 - **Dataset oficial de instrucciones:** [MBZUAI/GeoChat_Instruct en Hugging Face](https://huggingface.co/datasets/MBZUAI/GeoChat_Instruct)
 
 ### 1.4 Arquitectura Base
-GeoChat-7B se basa en la arquitectura de **LLaVA-1.5** adaptada para teledetección mediante:
+GeoChat se basa en la arquitectura de **LLaVA-1.5** adaptada para teledetección mediante:
 1. **Encoder Visual:** CLIP ViT-L/14 (`openai/clip-vit-large-patch14-336`), adaptado con interpolación posicional para operar a alta resolución (504×504 píxeles con parches de 14×14).
 2. **Proyector Multimodal:** Conector MLP de dos capas con funciones de activación no lineal GELU, encargado de alinear espacial y semánticamente los tokens visuales con el espacio latente del modelo de lenguaje.
 3. **Modelo de Lenguaje Autorregresivo (LLM):** Vicuna-7B (versión v1.5), un modelo ajustado a partir de LLaMA-2 de Meta con 7 mil millones de parámetros.
