@@ -1,6 +1,18 @@
 # GeoChat
 
-GeoChat es un modelo de lenguaje visual de gran escala (LVLM) multimodal especializado en teledetección (*Remote Sensing*), desarrollado originalmente por investigadores de MBZUAI (publicado en CVPR 2024) mediante la integración del codificador visual CLIP ViT-L/14, un proyector MLP y el modelo de lenguaje Vicuna-7B (arquitectura LLaVA-1.5) ajustado por instrucciones con el dataset GeoChat_Instruct (~318k pares de tareas geoespaciales). Este repositorio documenta la adaptación técnica y ejecución práctica en Google Colab utilizando una GPU Nvidia Tesla T4 mediante cuantización a 4 bits (`bitsandbytes`), la implementación de parches de compatibilidad para versiones modernas de la librería `transformers` (resolviendo incompatibilidades en `hf_prefixlm_converter.py`, `builder.py`, `clip_encoder.py` y `geochat_arch.py` ante `DynamicCache`), y su evaluación analítica sobre imágenes satelitales con generación de respuestas en español.
+**GeoChat** es un Modelo de Lenguaje Visual de Gran Escala (LVLM) multimodal diseñado y especializado para la interpretación de imágenes de teledetección (*Remote Sensing*), desarrollado originalmente por investigadores de MBZUAI (publicado en CVPR 2024). A diferencia de los modelos de visión generales, GeoChat está optimizado para analizar vistas aéreas y satelitales, permitiendo interrogar escenas territoriales en lenguaje natural, reconocer coberturas del suelo, resolver preguntas visuales complejas y ubicar elementos en el espacio geográfico. Este repositorio documenta su adaptación técnica y ejecución práctica en Google Colab con una GPU Nvidia Tesla T4 mediante cuantización a 4 bits (`bitsandbytes`), parches de compatibilidad para versiones modernas de `transformers` y evaluación cualitativa con generación de respuestas en español.
+
+### ¿Qué puede hacer?
+
+| Tarea | Descripción |
+|---|---|
+| 🏷️ Clasificación de escena | Identificar el tipo de zona (urbana, rural, industrial...) |
+| 📝 Descripción de imagen | Generar una descripción detallada de la imagen satelital |
+| ❓ VQA (Visual Question Answering) | Responder preguntas sobre el contenido de la imagen |
+| 📍 Grounding visual | Localizar objetos mencionados con coordenadas |
+| 🗣️ Conversación | Mantener un diálogo sobre la imagen |
+
+---
 
 - [Ver ficha del modelo](./MODEL_CARD.md)
 - [Ver ficha del conjunto de datos](./DATASET_CARD.md)

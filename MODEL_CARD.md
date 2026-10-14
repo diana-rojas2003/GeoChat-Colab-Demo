@@ -30,13 +30,25 @@ Esta ficha de modelo documenta **GeoChat**, el primer Modelo de Lenguaje Visual 
 ## 1. Detalles del Modelo (Model Details)
 
 ### 1.1 Información Básica
-- **Nombre del modelo:** GeoChat (`MBZUAI/geochat`).
+- **Nombre del modelo:** GeoChat (identificador del repositorio en Hugging Face: [`MBZUAI/geochat-7B`](https://huggingface.co/MBZUAI/geochat-7B)).
 - **Versión:** 1.0 (Publicado formalmente en **CVPR 2024**; pre-print en arXiv en noviembre de 2023).
 - **Tipo de modelo:** Modelo de Lenguaje Visual Multimodal (LVLM / Large Vision-Language Model) ajustado por instrucciones para imágenes satelitales y aéreas.
 - **Fecha de publicación original:** Noviembre de 2023 (arXiv:2311.15826) / Junio de 2024 (CVPR 2024).
 - **Fecha de esta ficha y adaptación:** 14 de octubre de 2026.
 
-### 1.2 Autoría y Créditos
+### 1.2 ¿Qué puede hacer el modelo? (Capacidades Fundamentales)
+
+Más allá de los detalles de arquitectura, el valor primordial de **GeoChat** radica en sus capacidades multifuncionales para el análisis e interpretación visual del territorio:
+
+| Tarea | Descripción |
+|---|---|
+| 🏷️ Clasificación de escena | Identificar el tipo de zona (urbana, rural, industrial...) |
+| 📝 Descripción de imagen | Generar una descripción detallada de la imagen satelital |
+| ❓ VQA (Visual Question Answering) | Responder preguntas sobre el contenido de la imagen |
+| 📍 Grounding visual | Localizar objetos mencionados con coordenadas |
+| 🗣️ Conversación | Mantener un diálogo sobre la imagen |
+
+### 1.3 Autoría y Créditos
 - **Desarrollado por (modelo original):**  
   Kartik Kuckreja, Muhammad Sohail Danish, Muzammal Naseer, Abhijit Das, Salman Khan y Fahad Shahbaz Khan.  
   *Institución:* Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dabi, Emiratos Árabes Unidos.
@@ -46,19 +58,19 @@ Esta ficha de modelo documenta **GeoChat**, el primer Modelo de Lenguaje Visual 
   *Curso:* Inteligencia Artificial Aplicada al Territorio.  
   *Contacto:* `dkavendanor@udistrital.edu.co` | GitHub: [`diana-rojas2003`](https://github.com/diana-rojas2003).
 
-### 1.3 Recursos y Enlaces Oficiales
+### 1.4 Recursos y Enlaces Oficiales
 - **Artículo científico (Paper):** [GeoChat: Grounded Large Vision-Language Model for Remote Sensing (CVPR 2024)](https://arxiv.org/abs/2311.15826)
 - **Repositorio de código fuente original:** [mbzuai-oryx/GeoChat en GitHub](https://github.com/mbzuai-oryx/GeoChat)
 - **Pesos preentrenados oficiales:** [MBZUAI/geochat-7B en Hugging Face](https://huggingface.co/MBZUAI/geochat-7B)
 - **Dataset oficial de instrucciones:** [MBZUAI/GeoChat_Instruct en Hugging Face](https://huggingface.co/datasets/MBZUAI/GeoChat_Instruct)
 
-### 1.4 Arquitectura Base
+### 1.5 Arquitectura Base
 GeoChat se basa en la arquitectura de **LLaVA-1.5** adaptada para teledetección mediante:
 1. **Encoder Visual:** CLIP ViT-L/14 (`openai/clip-vit-large-patch14-336`), adaptado con interpolación posicional para operar a alta resolución (504×504 píxeles con parches de 14×14).
 2. **Proyector Multimodal:** Conector MLP de dos capas con funciones de activación no lineal GELU, encargado de alinear espacial y semánticamente los tokens visuales con el espacio latente del modelo de lenguaje.
 3. **Modelo de Lenguaje Autorregresivo (LLM):** Vicuna-7B (versión v1.5), un modelo ajustado a partir de LLaMA-2 de Meta con 7 mil millones de parámetros.
 
-### 1.5 Licenciamiento y Estado Legal `[VERIFICAR]`
+### 1.6 Licenciamiento y Estado Legal `[VERIFICAR]`
 - **Licencia declarada en Hugging Face:** Apache-2.0 por MBZUAI.
 - **Licencias heredadas y restricciones `[VERIFICAR]`:**  
   Aunque el repositorio declara Apache-2.0, el modelo hereda componentes que imponen restricciones legales estrictas:
@@ -71,7 +83,7 @@ GeoChat se basa en la arquitectura de **LLaVA-1.5** adaptada para teledetección
 
 ## 2. Alcance de esta Ficha (Scope of this Card)
 
-Esta ficha describe el modelo preentrenado **GeoChat-7B** publicado por MBZUAI y su **ejecución técnica experimental en Google Colab** realizada por Diana Katherin Avendaño Rojas.
+Esta ficha describe el modelo preentrenado **GeoChat** publicado por MBZUAI y su **ejecución técnica experimental en Google Colab** realizada por Diana Katherin Avendaño Rojas.
 
 ### Delimitación Clara del Trabajo:
 1. **Sin reentrenamiento:** La autora de la adaptación **NO reentrenó** los pesos del modelo ni modificó los tensores base originales.
@@ -87,7 +99,7 @@ Esta ficha describe el modelo preentrenado **GeoChat-7B** publicado por MBZUAI y
 
 **Autora de las modificaciones:** Diana Katherin Avendaño Rojas.
 
-Para lograr la ejecución exitosa de GeoChat-7B en Google Colab en el año 2026 frente al ecosistema actual de Hugging Face y PyTorch, se aplicaron las siguientes modificaciones y parches de código:
+Para lograr la ejecución exitosa de GeoChat en Google Colab en el año 2026 frente al ecosistema actual de Hugging Face y PyTorch, se aplicaron las siguientes modificaciones y parches de código:
 
 ### 3.1 Infraestructura y Cuantización
 - **Hardware de ejecución:** Google Colab con acelerador gráfico Nvidia Tesla T4 (15.8 GB VRAM, arquitectura Turing, cómputo CUDA 7.5).
@@ -237,9 +249,9 @@ Comparación de exactitud (%) frente a modelos fundacionales generalistas y espe
 | Qwen-VL | 62.90 | 52.60 |
 | MiniGPT-v2 | 4.76 | 12.90 |
 | LLaVA-1.5 (7B) | 68.00 | 51.00 |
-| **GeoChat-7B (Ours)** | **84.43** | **72.03** |
+| **GeoChat (Ours)** | **84.43** | **72.03** |
 
-> **Hallazgo:** GeoChat-7B supera a su modelo base LLaVA-1.5 por más de **+16.4 %** en UCMerced y más de **+21.0 %** en AID, demostrando que el ajuste por instrucciones especializado en teledetección es indispensable frente a los VLMs de propósito general.
+> **Hallazgo:** GeoChat supera a su modelo base LLaVA-1.5 por más de **+16.4 %** en UCMerced y más de **+21.0 %** en AID, demostrando que el ajuste por instrucciones especializado en teledetección es indispensable frente a los VLMs de propósito general.
 
 ### 9.2 Visual Question Answering Zero-Shot en RSVQA-HRBEN (Tabla 8 del Paper)
 Exactitud de respuesta desglosada por categoría temática:
@@ -249,7 +261,7 @@ Exactitud de respuesta desglosada por categoría temática:
 | Qwen-VL | 66.44 % | 60.41 % | 63.06 % |
 | MiniGPT-v2 | 40.79 % | 50.91 % | 46.46 % |
 | LLaVA-1.5 (7B) | **69.83 %** | 67.29 % | 68.40 % |
-| **GeoChat-7B (Ours)** | 58.45 % | **83.19 %** | **72.30 %** |
+| **GeoChat (Ours)** | 58.45 % | **83.19 %** | **72.30 %** |
 
 > **Hallazgo:** GeoChat aventaja ampliamente a los modelos genéricos en preguntas de comparación territorial (+15.9 % sobre LLaVA-1.5), consolidando un promedio general superior del **72.30 %**.
 
@@ -360,7 +372,7 @@ from geochat.mm_utils import get_model_name_from_path, tokenizer_image_token, Ke
 from geochat.conversation import conv_templates, SeparatorStyle
 from geochat.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN
 
-model_path = 'MBZUAI/geochat-7B'
+model_path = 'MBZUAI/geochat-7B'  # Identificador oficial en Hugging Face
 model_name = get_model_name_from_path(model_path)
 tokenizer, model, image_processor, context_len = load_pretrained_model(
     model_path, None, model_name, load_8bit=False, load_4bit=True, device='cuda'
@@ -427,7 +439,7 @@ Para referenciar esta implementación, parches de compatibilidad en Google Colab
 
 ```bibtex
 @misc{avendano2026geochatcolab,
-  title={Adaptación, Optimización en 4-Bits y Ficha Técnica de GeoChat-7B para Teledetección en Google Colab},
+  title={Adaptación, Optimización en 4-Bits y Ficha Técnica de GeoChat para Teledetección en Google Colab},
   author={Avenda{\~n}o Rojas, Diana Katherin},
   year={2026},
   howpublished={Universidad Distrital Francisco Jos{\'e} de Caldas, Curso de Inteligencia Artificial Aplicada al Territorio},
